@@ -1,6 +1,5 @@
 {% load staticfiles %}
 
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,39 +7,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic' rel='stylesheet' type='text/css'>
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="{% static 'img/favicon.ico' %}">
+    <link rel="icon" href="/static/img/logo.ico">
 
-    <title>{% block head_title %}TS{% endblock %}</title>
+    <title>{% block head_title %}Tiny Spot{% endblock %}</title>
 
     {% include 'head_css.html' %}
+
+     
+
+
 
   </head>
 
   <body>
-      <!-- Fixed navbar -->
-      {% include 'navbar.html' %}
 
-      <div class="container">
-        {% block jumbotron %}
-        
-        {% endblock %}
+  {% include 'navbar.html' %}
 
-        {% block content %}
+{% block jumbotron %}
 
-        {% endblock %}
+            {% endblock %}
 
-      </div> <!-- /container -->
+    <div class="container-fluid">
+            
 
-      {% include 'javascript.html' %}
+          
+            {% block content %}
 
+            {% endblock %}
+              
+
+    </div> <!-- /container -->
+
+    {% include "javascript.html" %}
+    
+    
   </body>
 </html>
-
-
-
-
-
-
-

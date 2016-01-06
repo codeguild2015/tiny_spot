@@ -1,1 +1,1 @@
-{% load i18n %}{% trans "Account activation on" %}Registration Complete. {{ site.name }}
+Complete Registration for {{ site.name }}

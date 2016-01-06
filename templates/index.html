@@ -5,27 +5,37 @@
 
 {% block head_title %}Welcome | {{ block.super }}{% endblock %}
 
-
+<style>
+{% block style %}
+.navbar-static-top {
+    margin-bottom: 0px !important;
+}
+.jumbotron {
+    background-color:#0E3D14;
+    color: #FFF;
+}
+{% endblock %}
+</style>
 
 
      
 {% block jumbotron %}
  {% if not request.user.is_authenticated %}
+
 <div class="jumbotron">
  <div class="container">
     <div class="row">
-        <div class='col-sm-6 jumbo_text'>
-        <h1>Tiny Spot</h1>
-        <p>A palce where tiny house enthusiasts and the curious can come together and share there stories. Register to tell us your story or browse as a guest if you wish</p>
-        <!-- <p>
+        <div class='col-sm-6'>
+        <h1>Try Django 1.8</h1>
+        <p>The MVP Landing project is designed to get your project started. The goal is to help you launch as soon as possible with the least amount of investment using time or money. Join Us today.</p>
+        <p>
         <a class="btn btn-lg btn-primary" href="" role="button">Join Us &raquo;</a>
-        </p> -->
+        </p>
         </div>
-        <!-- <div class='col-sm-6' >
+        <div class='col-sm-6' >
             <iframe width="560" height="315" src="https://www.youtube.com/embed/2uLYO1LUf6Q" frameborder="0" allowfullscreen></iframe>
 
-        </div> -->
-
+        </div>
         </div>
     </div>
  </div>
@@ -44,7 +54,9 @@
     <table class='table'>
     {% for instance in queryset %}
         <tr><td>{{ forloop.counter }}</td><td>{{ instance.email }}</td><td>{{ instance.full_name }}</td><td>{{ instance.timestamp|timesince }} ago</td></tr>
-        
+        {% if instance.email == "abc@gmail.edu" %}
+        <tr><td>is equal</td></tr>
+        {% endif %}
     {% endfor %}
     </table>
 
@@ -54,18 +66,24 @@
 <div class="row">
 
   <div class="col-sm-3 pull-right">
-    <a class="twitter-timeline" href="https://twitter.com/tiny_spot/lists/tinylist" data-widget-id="684529061155090433">Tweets from https://twitter.com/tiny_spot/lists/tinylist</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-    </script>
+    
+            <p class='lead text-align-center'>{{ title }}</p>
+
+            <form method='POST' action=''>{% csrf_token %}
+            {{ form|crispy }}
+
+            <input class='btn btn-primary' type='submit' value='Sign Up' />
+
+            </form>
     </div>
 
     <div class='col-sm-3'>
-<p class='lead text-align-center'>Living is a little cramped...</p>
-            <!-- <img src='{% static "" %}' class='img-responsive' /> -->
+<p class='lead text-align-center'>Django &amp; Bootstrap</p>
+            <img src='{% static "img/IMG_4571.jpg" %}' class='img-responsive' />
 </div>
 
 <div class='col-sm-3'>
-<p class='lead text-align-center'>A little cozy... 
+<p class='lead text-align-center'>Created for Starters 
 <br/>
 <span class='fa-stack fa-lg fa-5x'>
 <i class='fa fa-comment-o fa-stack-2x'></i>
@@ -77,11 +95,11 @@
 </div>
 
 <div class='col-sm-3'>
-<p class='lead text-align-center'>a little more affordable <br/><br/>
+<p class='lead text-align-center'>Always Open Source <br/><br/>
 
 <span class="fa-stack fa-lg fa-5x">
 <i class="fa fa-circle-o-notch fa-stack-2x"></i>
-  <i class="fa fa-square-o fa-stack-2x"></i>
+  <!-- <i class="fa fa-square-o fa-stack-2x"></i> -->
   <i class="fa fa-github fa-stack-1x"></i>
 </span>
 </p>
