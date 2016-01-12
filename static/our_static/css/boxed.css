@@ -11,7 +11,7 @@ Description: A default stylesheet for Striking Interior Design Template, Designe
   ----- BOXED VERSION BACKGROUND 
   \ +=+=+=+=+=+=+=+=+=+=+=+=+=+=+= */
 body {
-	background-color: #e0dcd5 !important;
+	background-color: #999 !important;
 }
 
 /* === if you want texture, enable this body tag and comment above === */

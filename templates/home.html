@@ -10,26 +10,35 @@
 
      
 {% block jumbotron %}
- {% if not request.user.is_authenticated %}
-<div class="jumbotron">
- <div class="container">
-    <div class="row">
-        <div class='col-sm-6 jumbo_text'>
-        <h1>Tiny Spot</h1>
-        <p>A palce where tiny house enthusiasts and the curious can come together and share there stories. Register to tell us your story or browse as a guest if you wish</p>
-        <!-- <p>
-        <a class="btn btn-lg btn-primary" href="" role="button">Join Us &raquo;</a>
-        </p> -->
+ <!--  :::  HOME SLIDER ::: -->
+<section id="slides" class="BGdark slides2">
+    <ul class="bxslider">
+      <li>
+        <img class="img-responsive" src="/static/img/tinyhouse.jpg" alt="" />
+        <div class="symbol">
+            <div class="absShape text-center">
+                <h1>Tiny Spot<small>Share your tiny house story.</small></h1>
+            </div>
         </div>
-        <!-- <div class='col-sm-6' >
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/2uLYO1LUf6Q" frameborder="0" allowfullscreen></iframe>
-
-        </div> -->
-
+      </li>
+      <li>
+        <img class="img-responsive" src="/static/img/tinyhouse2.jpg" alt="" />
+        <div class="symbol">
+            <div class="absShape text-center">
+                <h1>Tiny Spot<small>Share your tiny house story.</small></h1>
+            </div>
         </div>
-    </div>
- </div>
- {% endif %}
+      </li>
+      <li>
+        <img class="img-responsive" src="/static/img/tinyhouse3.jpg" alt="" />
+        <div class="symbol">
+            <div class="absShape text-center">
+                 <h1>Tiny Spot<small>Share your tiny house story.</small></h1>
+            </div>
+        </div>
+      </li>
+    </ul>
+</section>
 {% endblock %}
 
 
@@ -51,46 +60,107 @@
     {% endif %}
 
  {% else %}
+
+
+
+
 <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Project One</h3>
+                <h4>Subheading</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
 
-  <div class="col-sm-3 pull-right">
-    <a class="twitter-timeline" href="https://twitter.com/tiny_spot/lists/tinylist" data-widget-id="684529061155090433">Tweets from https://twitter.com/tiny_spot/lists/tinylist</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-    </script>
-    </div>
+        <hr>
 
-    <div class='col-sm-3'>
-<p class='lead text-align-center'>Living is a little cramped...</p>
-            <!-- <img src='{% static "" %}' class='img-responsive' /> -->
-</div>
+        <!-- Project Two -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Project Two</h3>
+                <h4>Subheading</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
+                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
 
-<div class='col-sm-3'>
-<p class='lead text-align-center'>A little cozy... 
-<br/>
-<span class='fa-stack fa-lg fa-5x'>
-<i class='fa fa-comment-o fa-stack-2x'></i>
-<i style='color:yellow;' class="fa fa-bolt fa-stack-1x"></i>
+        <hr>
 
-</span>
-</p>
+        <!-- Project Three -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Project Three</h3>
+                <h4>Subheading</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</p>
+                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
 
-</div>
+        <hr>
 
-<div class='col-sm-3'>
-<p class='lead text-align-center'>a little more affordable <br/><br/>
+        <!-- Project Four -->
+        <div class="row">
 
-<span class="fa-stack fa-lg fa-5x">
-<i class="fa fa-circle-o-notch fa-stack-2x"></i>
-  <i class="fa fa-square-o fa-stack-2x"></i>
-  <i class="fa fa-github fa-stack-1x"></i>
-</span>
-</p>
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Project Four</h3>
+                <h4>Subheading</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</p>
+                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Five -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/700x300" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Project Five</h3>
+                <h4>Subheading</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quo, minima, inventore voluptatum saepe quos nostrum provident ex quisquam hic odio repellendus atque porro distinctio quae id laboriosam facilis dolorum.</p>
+                <a class="btn btn-primary" href="#">View Project <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+
+        <hr>
+
+        
 
 
-</div>
 
-
-</div>
 {% endif %}
 
+{% include 'footer.html' %}
+<a href="#top" class="top"><i class="fa fa-angle-up fa-lg"></i></a>
+</body>
 {% endblock %}
+

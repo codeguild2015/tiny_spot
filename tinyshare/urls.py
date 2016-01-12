@@ -12,6 +12,7 @@ urlpatterns = [
     # Django Registration Redux
     url(r'^accounts/', include('registration.backends.default.urls')),
     url(r'^forums/', include('forums.urls', namespace='forums')),
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_URL)
 
 # if settings.DEBUG:
