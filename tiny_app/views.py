@@ -30,8 +30,7 @@ def home(request):
 
     if request.user.is_authenticated() and request.user.is_staff:
 
-        queryset = SignUp.objects.all().order_by('-timestamp')  # .filter(full_name__iexact="Justin")
-        # print(SignUp.objects.all().order_by('-timestamp').filter(full_name__iexact="Justin").count())
+        queryset = SignUp.objects.all().order_by('-timestamp')
         context = {
             "queryset": queryset
         }
@@ -48,8 +47,8 @@ def contact(request):
         form_full_name = form.cleaned_data.get("full_name")
         subject = 'Tiny Spot contact form'
         from_email = settings.EMAIL_HOST_USER
-        to_email = [from_email]  # Add more emails as a string if needed
-        contact_message = "%s: %s via %s" % ( 
+        to_email = [from_email]  # add more emails as a string if needed
+        contact_message = "%s: %s via %s" % (
                 form_full_name,
                 form_message,
                 form_email)
@@ -73,7 +72,7 @@ def form(request):
 def upload(request):  # for loop used to loop over the upload function..allows for multiple uploads.
     for count, x in enumerate(request.FILES.getlist("files")):
         def process(f):
-            with open('/static/img/file_' + str(count), 'wb+') as destination:
+            with open('/static/img/file_' + str(count), 'wb+') as destination:  # need to fix path to upload correctly.
                 for chunk in f.chunks():
                     destination.write(chunk)
         process(x)
