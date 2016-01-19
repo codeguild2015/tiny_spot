@@ -1,4 +1,6 @@
 from django.db import models
+from django.conf import settings
+# from django.contrib.auth.models import User
 
 
 class SignUp(models.Model):
@@ -9,3 +11,7 @@ class SignUp(models.Model):
 
     def __unicode__(self):
         return self.email
+
+
+def upload_to(instance, filename):
+    return '/'.join(['images', unicode(instance.pk), filename])

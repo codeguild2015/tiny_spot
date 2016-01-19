@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+# from ajaxuploader.views import AjaxFileUploader
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -25,7 +26,31 @@ SECRET_KEY = 'wzl-+a808rxpq_()m30*g*zsw&hac^we(fbkheuvp$lk@w@cua'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ADMINS = (
+    ('tinyadmin', 'djmedhaug@gmail.com'),
+)
+
+MANAGERS = ADMINS
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': 'mydatabase',
+#     }
+# }
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'tinyspot',
+        'USER': 'danamedhaug',
+        'PASSWORD': 'gtr00p06',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'dmedhaug@gmail.com'
@@ -57,6 +82,7 @@ INSTALLED_APPS = (
     'registration',
     # My Apps
     'tiny_app',
+    'index',
 )
 
 
@@ -92,41 +118,44 @@ TEMPLATES = [
 WSGI_APPLICATION = 'tinyshare.wsgi.application'
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': 'mydatabase',
-#     }
-# }
-
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'tinyspot',
-        'USER': 'danamedhaug',
-        'PASSWORD': 'gtr00p06',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
+# Hosts/domain names that are valid for this site; required if DEBUG is False
+# See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
+ALLOWED_HOSTS = []
+
+# Local time zone for this installation. Choices can be found here:
+# http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
+# although not all choices may be available on all operating systems.
+# In a Windows environment this must be set to your system time zone.
+TIME_ZONE = 'America/Los_Angeles'
+
+# Language code for this installation. All choices can be found here:
+# http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+SITE_ID = 1
 
+# If you set this to False, Django will make some optimizations so as not
+# to load the internationalization machinery.
 USE_I18N = True
 
+# If you set this to False, Django will not format dates, numbers and
+# calendars according to the current locale.
 USE_L10N = True
 
+# If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
+
+
+SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
+# uploader = AjaxFileUploader()
 
 STATIC_URL = '/static/'
 
@@ -143,7 +172,9 @@ MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "media_roo
 # Crispy Form Tags Settings
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
+
 ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_AUTO_LOGIN = True
-SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+

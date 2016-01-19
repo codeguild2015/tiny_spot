@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6, .navbar-default .navbar-nav li a, .navbar-default .navba
 }
 /* Background Color4 */
 .BGdark, .btn-sec:hover, .breadcrumbs, .team .social i:hover, .btn-dark, .navbar-default .navbar-toggle .icon-bar, a.outline.light:hover, .btn.btn-default.light:hover, .square3, .project-gallery.opt2 .item h6, .boxed section.BGdark, .boxed footer.BGdark {
-	background-color: #4d4d4d;
+	background-color: #808080;
 }
 /* use rgba values here */
 .BGdark.opaque, .square3.opaque {

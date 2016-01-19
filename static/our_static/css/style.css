@@ -13,7 +13,7 @@ Description: A default stylesheet for Striking Interior Design Template, Designe
 - ELEMENTS
   - SHAPE WITH 3 COLORS
   - FEATURED SECTION (heading with bg color)
-  - FEATURED BOX WITH BG
+  - FEATURED BOX WITH 
   - PROMOBOX
   - STAT
   - CALL TO ACTION
@@ -67,6 +67,11 @@ body {
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.35);
+}
+
+.navbar-collapse.collapse.in {
+    background-color: #4D4D4D;
+    
 }
 
 h1, h2, h3, h4, h5, h6, .navbar-default .navbar-nav li a, .btn, .form-control, .nav-tabs > li > a, .recent-project ul.bxslider li .project-data li strong, .recent-project ul.bxslider li .project-data a.btn, .big, .member-info .meta-data > div, .meta, .meta.counter div, .frame > div .oops, .post-date span, #contact.opt .office span, b.square, b.squareSmall {
@@ -130,6 +135,15 @@ h1 i.square, h2 i.square, h3 i.square, h4 i.square, h5 i.square, h6 i.square, h1
 
 ul.nav.navbar-nav {
     margin-top: 6px;
+}
+
+
+.fa-twitter-square {
+	margin-top: 7px;
+}
+.post_button {
+	margin-top: -65px;
+	
 }
 
 .row {
@@ -208,7 +222,8 @@ section {
 }
 .btn {
 	font-size: 1.15em;
-	padding: 0.55em 1em;
+    color:#fff;
+	padding: 0.20em 1em;
 	border: 0;
 	border-radius: 0;
 }
@@ -373,6 +388,14 @@ a.top:hover {
 .absShape {
 	position: absolute;
 	z-index: 9;
+}
+.navbar-nav>li>a {
+    padding-top: 10px; 
+    padding-bottom: 15px;
+}
+.navbar-default .navbar-toggle {
+    margin-top: -3.65em;
+    margin-right: 1.5em;
 }
 #preloader {
 	display: block;
@@ -568,10 +591,10 @@ i.square.outline, i.squareSmall.outline {
 	opacity: 0.3;
 }
 a.outline, .btn.btn-default {
-	background-color: transparent;
-	border-width: 1px;
-	border-style: solid;
-	opacity: 0.5;
+	background-color: #d5d5d5;
+    border-radius: 3px;
+    border-width: 1px;
+    border: 1px solid #9b9b9b;
 }
 i.square.outline.light, i.squareSmall.outline.light, a.outline.light, .btn.btn-default.light {
 	background-color: transparent;
@@ -2873,7 +2896,10 @@ a, .navbar-default .navbar-nav li ul li, .navbar-default .navbar-nav li ul li a,
 \ +=+=+=+=+=+=+=+=+=+=+=+=+=+=+= */
 @media only screen and (min-width: 1401px) {
 
-
+.post_button {
+	margin-top: none;
+	
+}
 
 .staff.opt .team.rectangle, .staff .team.rectangle {
 	height: 32em;
@@ -2961,9 +2987,12 @@ h5 {
 h6 {
 	font-size: 1.15em;
 }
-footer {
-    display: none;
+
+.post_button {
+	margin-top: none;
+	
 }
+
 .page-block {
 	position: relative;
 	padding: 4.85em 0;
@@ -3037,7 +3066,7 @@ footer {
 	line-height: 2.65em;
 }
 #slides.slides2 .symbol {
-	margin-top: 15%;
+	margin-top: 5%;
 }
 #owl-recent-project .item {
 	height: 528px;
@@ -3060,6 +3089,8 @@ h2 {
 h3 {
 	font-size: 1.50em;
 }
+
+
 .page-block {
 	position: relative;
 	padding: 4.85em 0;
@@ -3078,13 +3109,13 @@ h3 {
 	top: 8em;
 }
 .navbar-default .navbar-nav > li > a {
-	line-height: 8.5em;
+	line-height: 1.5em;
 }
 .cbp-af-header.cbp-af-header-shrink .navbar-nav > li > .sub-nav {
-	top: 5.55em;
+	top: 2.55em;
 }
 .cbp-af-header.cbp-af-header-shrink nav a {
-	line-height: 5.65em;
+	line-height: 2.65em;
 }
 .cbp-af-header.cbp-af-header-shrink .logo img {
 	width: 70%;
@@ -3177,10 +3208,18 @@ h3 {
 	height: auto;
 	right: 1em;
 }
+
+footer {
+    display: none;
+}
+
+
 .cbp-af-header.header2.cbp-af-header-shrink {
 	height: 100px;
 	margin-top: -2.65em;
 }
+
+
 #slides.slides2 .bx-wrapper {
 	height: auto;
 }
@@ -3190,6 +3229,7 @@ h3 {
 #slides.slides2 h1 {
 	font-weight: bold;
 }
+
 }
 /* iPads (portrait and landscape) ----------- */
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
@@ -3200,6 +3240,8 @@ header .container > div {
 	background-color: transparent;
 	color: #333;
 }
+
+
 .cbp-af-header.cbp-af-header-shrink .navbar-nav li span.clicks {
 	top: 28%;
 }
@@ -3669,6 +3711,9 @@ header .container {
 #services-single .navigation i {
 	margin-top: -1.5em;
 }
+#slides {
+	margin-top: 125px;
+}
 }
 /* Desktops, Large Screen and laptops ----------- */
 @media only screen and (max-width: 767px) {
@@ -3678,6 +3723,15 @@ html, body, div, p, table, tr, td, th, tbody, tfoot, ul, li, ol, dl, dd, dt, fie
 .wow {
 	visibility: visible;
 }
+.post_button {
+	margin-top: 40px;
+	
+}
+.single-post .author-bio .social {
+	float: none;
+	display: inline-block;
+}
+
 .content-box {
 	margin: 3em 0;
 }
@@ -3717,6 +3771,9 @@ html, body, div, p, table, tr, td, th, tbody, tfoot, ul, li, ol, dl, dd, dt, fie
 .navbar-nav, .navbar-collapse {
 	margin: 0;
 	padding: 0;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+     border-color: none; 
 }
 .navbar-default .navbar-nav > li > a {
 	text-align: left;
@@ -3783,7 +3840,7 @@ html, body, div, p, table, tr, td, th, tbody, tfoot, ul, li, ol, dl, dd, dt, fie
 	right: 1em;
 }
 #slides {
-	margin-top: 0;
+	display: none;
 }
 .breadcrumbs {
 	margin-top: 0;
@@ -3966,6 +4023,7 @@ footer.footer2 img {
 #owl-recent-project.homeBoxed {
 	margin-top: 0;
 }
+
 }
 @media only screen and (min-width: 769px) and (max-width: 875px) and (orientation: landscape) {
 #home .container > div {
@@ -3976,6 +4034,8 @@ footer.footer2 img {
 header .logo a, .cbp-af-header {
 	text-align: center;
 }
+
+
 .cbp-af-header {
 	height: 162px;
 }
@@ -4036,6 +4096,9 @@ h1 {
 }
 h1 small, h2 small {
 	font-size: 0.75em;
+}
+footer {
+    display: none;
 }
 .recent-project .bx-wrapper .bx-controls-direction a {
 	top: 30%;

@@ -77,3 +77,5 @@ def contact(request):
         "title_align_center": title_align_center,
     }
     return render(request, "forms.html", context)
+
+

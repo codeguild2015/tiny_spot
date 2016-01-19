@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-
+# from .models import PostForm
 from .forms import SignUpForm
 from .models import SignUp
 
