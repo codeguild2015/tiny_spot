@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True, serialize=False)),
                 ('title', models.CharField(verbose_name='Title', max_length=200)),
-                ('image', models.ImageField(verbose_name='Image', upload_to=tiny_app.models.upload_to)),
+                ('image', models.ImageField(verbose_name='Image')),
             ],
             options={
                 'verbose_name': 'Image',

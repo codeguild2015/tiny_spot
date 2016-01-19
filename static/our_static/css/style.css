@@ -74,6 +74,10 @@ body {
     
 }
 
+.text-align-center {
+	text-align: center;
+}
+
 h1, h2, h3, h4, h5, h6, .navbar-default .navbar-nav li a, .btn, .form-control, .nav-tabs > li > a, .recent-project ul.bxslider li .project-data li strong, .recent-project ul.bxslider li .project-data a.btn, .big, .member-info .meta-data > div, .meta, .meta.counter div, .frame > div .oops, .post-date span, #contact.opt .office span, b.square, b.squareSmall {
 	font-family: 'Roboto Slab', serif;
 }
@@ -82,6 +86,7 @@ input[type="submit"] {
 	margin-top: 0.5em;
 }
 h1 {
+	text-align:center;
 	font-size: 3.429em;
 	font-weight: 100;
 	margin: 0;

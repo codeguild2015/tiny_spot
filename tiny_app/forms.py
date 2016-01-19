@@ -9,7 +9,8 @@ class ContactForm(forms.Form):
     message = forms.CharField(widget=forms.Textarea)
 
 
-class SignUpForm(forms.ModelForm):
+class SignUpForm(forms.ModelForm):  # clean methods used to clean data in email and full_name.
+
     class Meta:
         model = SignUp
         fields = ['full_name', 'email']

@@ -82,7 +82,6 @@ INSTALLED_APPS = (
     'registration',
     # My Apps
     'tiny_app',
-    'index',
 )
 
 
