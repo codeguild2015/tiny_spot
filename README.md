@@ -36,7 +36,7 @@ Correct logout to redirect to homepage
 Deploy live.
 
 
-Screenshots
+Interactive Clips
 ------------
 
 
