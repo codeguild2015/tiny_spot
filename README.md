@@ -15,7 +15,7 @@ Installation
 ------------
 1. Clone Repo https://github.com/DJMedhaug/tiny_spot.git
 2. Make sure you are in the tinyshare folder.
-3. run manage.py runserver
+3. python manage.py runserver
 
 Built with
 ------------
